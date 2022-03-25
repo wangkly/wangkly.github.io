@@ -1,39 +1,40 @@
-## Welcome to GitHub Pages
+## My Reading Notes
 
-[ReactRead](React_01.md)
+### [React 源码阅读-01](React_01.md)
+> React 从16 的版本开始，引入了一个实验性的**concurrentMode** ,设计在concurrent的模式下，react的渲染过程可以中断，可以显著提升react的渲染性能。但是concurrentMode还是处于实验的阶段，官网也只有一些简单的介绍,（其实16.8后引入了hook,背后也有concurrentMode的因素...
 
-You can use the [editor on GitHub](https://github.com/wangkly/wangkly.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+### [React 源码阅读-02](React_02.md)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+>从上面的分析我们知道，reactDom.render 内部经历2个步骤:
+>- createContainer ，创建一个root ( FiberRoot ),一个 rootFiber ，并设置root.current = rootFiber ,rootFiber.stateNode = root
+2者相互保存对方的引用
+>- updateContainer ,创建完fiberRoot 和rootFiber后，执行updateContainer 。 new Update(),设置payload 为App. 放入rootFiber的updateQueue , 然后调用**scheduleUpdateOnFiber**，触发整个应用的更新
+....
 
-### Markdown
+### [React 源码阅读-03](React_03.md)
+> React  lane 模型简介。。。
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### [React 源码阅读-04](React_04.md)
+> performSyncWorkOnRoot 相关逻辑。。。
 
-```markdown
-Syntax highlighted code block
+### [React 源码阅读-05](React_05.md)
+> beginWork 相关逻辑
 
-# Header 1
-## Header 2
-### Header 3
+### [Vue3 源码阅读-01](vue3.x_01.md)
+> 在学习源码的过程中，有很多复杂的逻辑，当时可能理解了，但是随着时间的流逝，经常会很多的重要的知识点会被遗忘，主要是因为源码的思想一方面很复杂，有很多的算法思想在里面，理解起来会有困难，另一方面是因为，我们阅读的源码在平时开发的过程中使用不到。不用，所以经常会忘记。所以我想写一些读源码的过程中、记录一些笔记，可以方便日后在复习这些内容的时候。做些提示...
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
+### [Vue3 源码阅读-02](Vue3.x_02.md)
+> vue3项目入口...
 
-**Bold** and _Italic_ and `Code` text
+### [Vue3 源码阅读-03](Vue3.x_03.md)
+> reactive ref相关
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+### [Vue3 源码阅读-04](vue3.x_04.md)
+> watch computed 相关逻辑
 
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/wangkly/wangkly.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### 关于
+> 在学习的过程中，总是容易看了后面忘了前面，所以想着要做一些记录，方便后面再看的时候可以拿来参考，有助于记忆
+认识有限，内容中可能会有错误的地方，欢迎指正

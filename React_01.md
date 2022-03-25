@@ -8,9 +8,9 @@ React 从16 的版本开始，引入了一个实验性的**concurrentMode** ,设
 
 下面是一些介绍文档和视频
 
-[concurrentMode](https://reactjs.org/docs/concurrent-mode-reference.html)
+[ concurrentMode ](https://reactjs.org/docs/concurrent-mode-reference.html)
 
-[Flarnie Marchan - Ready for Concurrent Mode? | React Next 2019](https://www.youtube.com/watch?v=V1Ly-8Z1wQA&list=PLV91uluYvkQ6cR01PsYnLnJvX-DiwE8-o)
+[ Flarnie Marchan - Ready for Concurrent Mode? | React Next 2019 ](https://www.youtube.com/watch?v=V1Ly-8Z1wQA&list=PLV91uluYvkQ6cR01PsYnLnJvX-DiwE8-o)
 
 [Lin Clark - A Cartoon Intro to Fiber - React Conf 2017](https://www.youtube.com/watch?v=V1Ly-8Z1wQA&list=PLV91uluYvkQ6cR01PsYnLnJvX-DiwE8-o)
 
